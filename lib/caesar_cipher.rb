@@ -1,9 +1,6 @@
 # frozen_string_literal: true
 
-require 'pry'
-
 def caesar_cipher(string, shift)
-
   shift *= 2
   # make an array containing the complete alphabet
   alphabet = %w[a A b B c C d D e E f F g G h H i I j J k K l L m M n N o O p P q Q r R s S t T u U v V w W x X y Y z Z]
@@ -16,8 +13,6 @@ def caesar_cipher(string, shift)
 
   # iterate over the array
   character_array.each do |char|
-    
- 
     # check to see the character is in the alphabet if it's not then shovel it into
     # the encrypted_string because it's a special character
     if alphabet.index(char).nil?
@@ -28,7 +23,7 @@ def caesar_cipher(string, shift)
       index = alphabet.index(char) + shift
 
       # check to see if we need to loop around the alphabet array
-      
+
       remainder = index % 52
       encrypted_string += alphabet[remainder]
 
