@@ -28,17 +28,12 @@ def caesar_cipher(string, shift)
       index = alphabet.index(char) + shift
 
       # check to see if we need to loop around the alphabet array
-      if index > alphabet.length - 1 || index.negative?
-        remainder = index % 52
-        encrypted_string += alphabet[remainder]
+      
+      remainder = index % 52
+      encrypted_string += alphabet[remainder]
 
-      else
-        # shovel the encrypted character into the string
-        encrypted_string += alphabet[index]
-      end
     end
   end
-
 
   encrypted_string
 end
